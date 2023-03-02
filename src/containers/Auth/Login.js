@@ -18,10 +18,28 @@ class Login extends Component {
         return (
             <div className='login-background'>
                 <div className='login-container'>
-                    <div className='login-content'>
-                        abc
-                    </div>
-
+                    <div className='login-content row'>
+                        <div className='col-12 login-text'>Login</div>
+                        <div className='col-12 username'>
+                            <input type='text' className='form-control' placeholder='Email'></input>
+                            <span id="errorEmailText" class="errorEmailText"></span>
+                        </div>
+                        <div className='col-12 password'>
+                            <input type='password' className='form-control' placeholder='Password'></input>
+                            <span id="errorPassText" class="errorPassText"></span>
+                        </div>
+                        <button className="col-12 btn-login btn-login-form" type="submit" value="login">Login</button>
+                        <div className='col-12 forgot-text'>
+                            <a className='f-text' href='/'>Forgot password</a>
+                        </div>
+                        <div className='col-12 note-text'>
+                           <span className='or-text'>OR</span>
+                        </div>
+                        <div className='register'>
+                            Don't have an account yet?
+                            <a className='create-acc' href='/'> Create one here!</a>
+                        </div>
+                    </div>  
                 </div>
             </div>
         )
