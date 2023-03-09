@@ -22,11 +22,10 @@ body {
         // border: 1px solid red;
 
         .login-content {
-            padding: 20px;
+            padding: 35px;
 
             .login-text {
                 text-align: center;
-                padding-top: 15px;
                 font-weight: 600;
                 font-size: 30px;
             }
@@ -99,9 +98,36 @@ body {
                 }
             }
 
+            .social-login {
+                display: flex;
+                padding-top: 10px;
+                .login-google {
+                    padding: 0 65px;
+                    .google {
+                        color: #fff;
+                        height: 35px;
+                        background-color: red;
+                        padding: 10px;
+                        border-radius: 100%;
+                    }
+                }
+
+                .login-facebook {
+                    padding: 0 65px;
+                    .facebook {
+                        color: #fff;
+                        height: 35px;
+                        background-color: #0d6efd;
+                        padding: 10px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
             .register {
                 text-align: center;   
                 font-size: 18px;
+                padding-top: 35px;
                 
                 .create-acc {
                     text-decoration: none;
