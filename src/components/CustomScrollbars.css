@@ -1,0 +1,85 @@
+/*
+Error: Invalid CSS after "...-shadow-color: ": expected expression (e.g. 1px, bold), was "#0000004d;"
+        on line 27 of D:/Hoai/Test/Gaucon-shop/src/styles/_variables.scss
+        from line 1 of D:/Hoai/Test/Gaucon-shop/src/styles/common.scss
+        from line 1 of D:\Hoai\Test\Gaucon-shop\src\components\CustomScrollbars.scss
+
+22: $footer-next-disable: #ccc;
+23: 
+24: $bg-menu-color: #f5f5f5;
+25: $bg-scrollbar: #000;
+26: $bg-table-color: #f5f5f5;
+27: $box-shadow-color: #0000004d;
+28: 
+29: $dropdown-image: url("../assets/images/dropdown.svg");
+30: 
+31: //date picker
+32: $date-picker-bg: $common-white;
+
+Backtrace:
+D:/Hoai/Test/Gaucon-shop/src/styles/_variables.scss:27
+D:/Hoai/Test/Gaucon-shop/src/styles/common.scss:1
+D:\Hoai\Test\Gaucon-shop\src\components\CustomScrollbars.scss:1
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/lexer.rb:231:in `expected!'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:723:in `assert_expr'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:68:in `parse'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1134:in `sass_script'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:642:in `variable'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:321:in `to_tree'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+D:/BOX/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+D:/BOX/Koala/bin/sass:22:in `load'
+D:/BOX/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...-shadow-color: \": expected expression (e.g. 1px, bold), was \"#0000004d;\"\A         on line 27 of D:/Hoai/Test/Gaucon-shop/src/styles/_variables.scss\A         from line 1 of D:/Hoai/Test/Gaucon-shop/src/styles/common.scss\A         from line 1 of D:\Hoai\Test\Gaucon-shop\src\components\CustomScrollbars.scss\A \A 22: $footer-next-disable: #ccc;\A 23: \A 24: $bg-menu-color: #f5f5f5;\A 25: $bg-scrollbar: #000;\A 26: $bg-table-color: #f5f5f5;\A 27: $box-shadow-color: #0000004d;\A 28: \A 29: $dropdown-image: url(\"../assets/images/dropdown.svg\");\A 30: \A 31: //date picker\A 32: $date-picker-bg: $common-white;"; }
