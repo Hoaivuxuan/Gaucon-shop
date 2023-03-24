@@ -1,0 +1,58 @@
+
+#topbar {
+    background: #f2f2f2;
+    font-size: 14px;
+    padding: 4px 0;
+}
+a {
+    text-decoration: none;
+}
+.tp_header {
+    .container-fluid {
+        padding: 0 15px;
+        .no-padding {
+            padding: 0;
+            .innerTopLeft {
+                .phone {
+                    padding-left: 5%;
+                    padding-right: 1%;
+                    width: 20px;
+                    height: 20px;
+                    float: left;
+                    background-size: cover;
+                }
+                .title-info-top {
+                    margin-right: 20px;
+                }
+            }
+            .innerTopRight {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    .cart_header_top {
+                        text-align: right;
+                        .cart {
+                            background-position: 75px 1px;
+                            color: black;
+                            width: 20px;
+                            height: 20px;
+                            float: left;
+                            background-size: cover;
+                        }
+                    }
+                    .person_header_top {
+                        text-align: right;
+                        .person {
+                            background-position: 75px 1px;
+                            color: black;
+                            width: 20px;
+                            height: 20px;
+                            float: left;
+                            background-size: cover;
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}

@@ -8,13 +8,17 @@ import { ToastContainer } from 'react-toastify';
 import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authentication';
 import { path } from '../utils'
 import { CustomToastCloseButton } from '../components/CustomToast';
+
 //
 import Home from '../routes/Home';
 import Login from './Auth/Login';
+import Topbar from './Header/Topbar';
 import Header from './Header/Header';
 import System from '../routes/System';
 import ConfirmModal from '../components/ConfirmModal';
-
+import Footer from './Footer/Footer';
+import './App.scss'
+import CustomScrollbars from '../components/CustomScrollbars';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -39,16 +43,25 @@ class App extends Component {
         return (
             <Fragment>
                 <Router history={history}>
-                    <div className="main-container">
+                <CustomScrollbars style={{height: '100vh', width: '100%'}}>
+                    <header id='header' className='test header has-sticky sticky-jump'>
+                        {/* <Route component={userIsNotAuthenticated(Topbar)} /> */}
+                        <Route component={userIsNotAuthenticated(Header)} />
+                    </header>
+                    {/*  */}
+                    <main className="main-container">
                         <ConfirmModal />
                         {this.props.isLoggedIn && <Header />}
 
                         <span className="content-container">
+
                             <Switch>
                                 <Route path={path.HOME} exact component={(Home)} />
                                 <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                 <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                
                             </Switch>
+
                         </span>
 
                         <ToastContainer
@@ -57,7 +70,12 @@ class App extends Component {
                             pauseOnFocusLoss={true} closeOnClick={false} draggable={false}
                             closeButton={<CustomToastCloseButton />}
                         />
-                    </div>
+                    </main>
+                    {/*  */}
+                    <footer id='footer' className='footer-wrapper'>
+                        <Route component={userIsNotAuthenticated(Footer)} />
+                    </footer>
+                </CustomScrollbars>
                 </Router>
             </Fragment>
         )
@@ -67,7 +85,7 @@ class App extends Component {
 const mapStateToProps = state => {
     return {
         started: state.app.started,
-        isLoggedIn: state.admin.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn
     };
 };
 

@@ -1,14 +1,9 @@
-body {
-    padding-top: 99px !important;
-}
-
 .login-background {
 
     background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%) bottom center no-repeat;
     background-size: cover;
     padding: 50px 0;
     margin:auto;
-
     .container {
         max-width: 1210px;
         margin: auto;
@@ -150,5 +145,8 @@ body {
                 }
             }
         }
+    }
+    .footer {
+
     }
 }

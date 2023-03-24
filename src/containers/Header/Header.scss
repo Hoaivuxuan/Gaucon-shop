@@ -1,23 +1,62 @@
 @import "../../styles/common.scss";
 
-.header-container {
-    z-index: 99;
-    display: flex;
-    justify-content: space-between;
-    background-color: $colormain;
-    color: $common-text-color;
-    height: 40px;
-    position: relative;
-    .btn-logout {
-        color: $common-text-color;
-        line-height: 40px;
-        height: 40px;
-        padding: 0 10px;
-        &:hover {
-            background-color: darken($colormain, 5);
-        }
-        i {
-            font-size: $base-size + 1px;
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+}
+
+#logo img {
+    max-height: 98px;
+    width: 150px;
+}   
+
+#logo {
+    width: 220px;
+}
+
+.header-wrapper {
+    .logo-left {
+        .logo {
+            // margin-right: 30px;
         }
     }
+}
+
+.padding-left-right {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.flex-row {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flex-left {
+    margin-right: auto;
+}
+
+.flex-col {
+    max-height: 100%;
+}
+
+.flex-grow {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-negative: 1;
+    -ms-flex-preferred-size: auto !important;
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
+import * as actions from "../../store/actions";
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -9,7 +11,6 @@ import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 // import { Button } from 'reactstrap';
 //
 import { handleLoginApi } from '../../services/userService';
-import * as actions from "../../store/actions";
 import './Login.scss';
 // import { FormattedMessage } from 'react-intl';
 
@@ -21,6 +22,7 @@ class Login extends Component {
             username: '',
             password: '',
             iShowPassword: false,
+            errMessage: ''
         }
     }
 
@@ -37,9 +39,35 @@ class Login extends Component {
     }
 
     handleLogin = async () => {
-        console.log('username: ' + this.state.username + 'password: ' + this.state.password)
-        console.log('all state', this.state)
-        await handleLoginApi(this.state.username, this.state.password)
+        this.setState({
+            errMessage: ''
+        })
+        try {
+            const data = await handleLoginApi(this.state.username, this.state.password);
+            if(data && data.errCode !== 0) {
+                this.setState({
+                    errMessage: data.message
+                })
+            }
+            if(data && data.errCode === 0) {
+                this.props.userLoginSuccess(data.user)
+
+                this.setState({
+                    errMessage: data.message
+                })
+            }
+            console.log(data)
+        } catch (error) {
+            if(error.response) {
+                if(error.response.data) {
+                    this.setState({
+                        errMessage: error.response.data.message
+                    })
+                }
+            }
+            console.log('hello', error.response)
+            
+        }
     }
 
     handleShowHidePassword = () => {
@@ -52,8 +80,15 @@ class Login extends Component {
         //JSX
         return (
             <div className='login-background'>
+                {/* <Link to="/about">
+                    <img
+                        src="https://newseven.vn/wp-content/uploads/2023/02/coverweb2.png"
+                        alt="example"
+                    />
+                </Link> */}
                 <div className='container'>
                     <div className='login-content row'>
+
                         <div className='left-col'>
                             <div className='col-12 login-text'>Login</div>
                             <div className='col-12 username'>
@@ -78,7 +113,11 @@ class Login extends Component {
                                         onClick={() => { this.handleShowHidePassword() }}
                                     ><FontAwesomeIcon className='eye' icon={this.state.iShowPassword ? faEye : faEyeSlash} /></span>
                                 </div>
+                                <div className='col-12' style={{color: 'red'}}>
+                                    {this.state.errMessage}
+                                </div>
                             </div>
+                            
                             <div className='col-12'>
                                 <button className="col-12 btn-login btn-login-form" onClick={() => { this.handleLogin() }} type="submit" value="login">Login</button>
                             </div>
@@ -105,6 +144,10 @@ class Login extends Component {
                         </div>
                     </div>
                 </div>
+
+                <div className='footer'>
+
+                </div>
             </div>
         )
     }
@@ -119,8 +162,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         navigate: (path) => dispatch(push(path)),
-        adminLoginSuccess: (adminInfo) => dispatch(actions.adminLoginSuccess(adminInfo)),
-        adminLoginFail: () => dispatch(actions.adminLoginFail()),
+        // adminLoginSuccess: (adminInfo) => dispatch(actions.adminLoginSuccess(adminInfo)),
+        // userLoginFail: () => dispatch(actions.adminLoginFail()),
+        userLoginSuccess: (userInfor) => dispatch(actions.userLoginSuccess(userInfor))
     };
 };
 
