@@ -1,9 +1,10 @@
 .login-background {
 
-    background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%) bottom center no-repeat;
+    background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%) bottom center no-repeat;
     background-size: cover;
     padding: 50px 0;
-    margin:auto;
+    margin: auto;
+
     .container {
         max-width: 1210px;
         margin: auto;
@@ -23,38 +24,51 @@
                 padding: 0 15%;
                 border-right: 1px solid #DDE1EF;
                 text-align: center;
+
                 .login-text {
-                    text-align: center;
-                    font-weight: 600;
+                    font-family: 'SVN-Gilroy Bold';
                     font-size: 30px;
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                    text-transform: unset;
+                    text-align: center;
+                    color: #fcaf17;
+                    line-height: 1;
+                    margin-bottom: 30px;
+
+                    span {
+                        color: #131382;
+                    }
                 }
-                
+
                 .username {
                     // height: 48px;
-                    padding : 5% 0;
+                    padding: 5% 0;
                     font-size: 18px;
-                    
+
                     .form-control {
                         font-size: 18px;
                         height: 48px;
                         border-radius: 5px;
-    
+
                     }
                 }
-    
+
                 .password {
-                    padding : 5% 0 10%;
+                    padding: 5% 0 10%;
                     font-size: 18px;
-                    
+
                     .form-control {
                         font-size: 18px;
                         height: 48px;
                         border-radius: 5px;
-    
+
                     }
-    
+
                     .custom-input-password {
                         position: relative;
+
                         .eye {
                             position: absolute;
                             right: 15px;
@@ -62,7 +76,7 @@
                         }
                     }
                 }
-    
+
                 .btn-login {
                     padding-top: 5px;
                     padding-bottom: 5px;
@@ -73,27 +87,27 @@
                     border-radius: 5px;
                     border: 1px solid #fff;
                 }
-    
+
                 .forgot-text {
                     padding-top: 25px;
                     text-align: center;
                     font-weight: 300;
                     font-size: 18px;
-    
+
                     .f-text {
                         color: orange;
                         text-decoration: none;
                         font-weight: 300;
                     }
                 }
-    
+
                 .note-text {
                     background-color: #DDE1E3;
                     height: 1px;
                     position: relative;
                     margin: 35px auto;
                     text-align: center;
-    
+
                     .or-text {
                         position: absolute;
                         transform: translate(-50%, -50%);
@@ -104,14 +118,16 @@
                         padding: 5px;
                     }
                 }
-    
+
                 .social-login {
                     text-align: center !important;
                     width: 100% !important;
                     float: left !important;
                     margin-bottom: 52px;
+
                     .login-google {
                         padding: 0 40px;
+
                         .google {
                             color: #fff;
                             height: 35px;
@@ -120,9 +136,10 @@
                             border-radius: 100%;
                         }
                     }
-    
+
                     .login-facebook {
                         padding: 0 40px;
+
                         .facebook {
                             color: #fff;
                             height: 35px;
@@ -132,12 +149,12 @@
                         }
                     }
                 }
-    
+
                 .register {
-                    text-align: center;   
+                    text-align: center;
                     font-size: 18px;
                     padding-top: 20px;
-                    
+
                     .create-acc {
                         text-decoration: none;
                         color: orange;
@@ -146,7 +163,6 @@
             }
         }
     }
-    .footer {
 
-    }
+    .footer {}
 }

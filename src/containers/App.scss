@@ -28,6 +28,7 @@ body {
     padding: 2%;
     margin: 2%;
 }
+
 #header {
     height: 100px;
     background-color: white;
@@ -35,4 +36,5 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }

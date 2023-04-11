@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
-import * as actions from "../../store/actions";
+import * as actions from "../../../store/actions";
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -10,7 +10,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 // import { Button } from 'reactstrap';
 //
-import { handleLoginApi } from '../../services/userService';
+import { handleLoginApi } from '../../../services/userService';
 import './Login.scss';
 // import { FormattedMessage } from 'react-intl';
 
@@ -90,7 +90,9 @@ class Login extends Component {
                     <div className='login-content row'>
 
                         <div className='left-col'>
-                            <div className='col-12 login-text'>Login</div>
+                            <div className='col-12 login-text'>
+                                <span>ĐĂNG</span> NHẬP
+                            </div>
                             <div className='col-12 username'>
                                 <input
                                     type='text'
@@ -119,13 +121,13 @@ class Login extends Component {
                             </div>
                             
                             <div className='col-12'>
-                                <button className="col-12 btn-login btn-login-form" onClick={() => { this.handleLogin() }} type="submit" value="login">Login</button>
+                                <button className="col-12 btn-login btn-login-form" onClick={() => { this.handleLogin() }} type="submit" value="login">Đăng nhập</button>
                             </div>
                             <div className='col-12 forgot-text'>
-                                <a className='f-text' href='/'>Forgot password</a>
+                                <a className='f-text' href='/'>Quên mật khẩu</a>
                             </div>
                             <div className='col-12 note-text'>
-                                <span className='or-text'>Or login with</span>
+                                <span className='or-text'>Hoặc đăng nhập bằng</span>
                             </div>
                             <div className='block social-login'>
                                 <div className='d-flex justify-content-center page-signup-social-wrapper'>
@@ -138,8 +140,8 @@ class Login extends Component {
                                 </div>
                             </div>
                             <div className='register'>
-                                Don't have an account yet?
-                                <a className='create-acc' href='/'> Create one here!</a>
+                                Bạn chưa có tài khoản?
+                                <a className='create-acc' href='/'> Đăng ký ngay!</a>
                             </div>
                         </div>
                     </div>

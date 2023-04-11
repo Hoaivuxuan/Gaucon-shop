@@ -68,7 +68,7 @@ class Footer extends Component {
                 </section>
 
                 <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-                    © 2023 Copyright:
+                    © 2023 Design by: 
                     <a className='text-reset fw-bold' href='/'>
                     ShopGau.com
                     </a>

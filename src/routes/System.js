@@ -8,6 +8,7 @@ import RegisterPackageGroupOrAcc from '../containers/System/RegisterPackageGroup
 class System extends Component {
     render() {
         const { systemMenuPath } = this.props;
+        // let linkToRedirect = systemMenuPath ? '/system/user-manage' : '/login';
         return (
             <div className="system-container">
                 <div className="system-list">

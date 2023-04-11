@@ -1,0 +1,42 @@
+.home {
+    img {
+        width: 100%;
+        // height: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .carousel {
+        img {
+            width: 100%;
+            // height: auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .carousel-cell {
+            width: 100%;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+    }
+
+    .slider-container {
+        padding: 0 0;
+        margin-bottom: 40px;
+    }
+
+    .flash-sale {
+        margin-left: 50px;
+        margin-right: 50px;
+        .col {
+            padding: 0 15px 30px;
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
