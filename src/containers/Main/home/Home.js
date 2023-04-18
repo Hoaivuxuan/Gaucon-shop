@@ -9,7 +9,7 @@ import "./Home.scss";
 class Home extends Component {
   render() {
     const { isLoggedIn } = this.props;
-    let linkToRedirect = isLoggedIn ? "/" : "/login";
+    // let linkToRedirect = isLoggedIn ? "/" : "/login";
 
     return (
       // <Redirect to={linkToRedirect} />
@@ -22,8 +22,8 @@ class Home extends Component {
             "lazyLoad": 1,
             "freeScroll": false,
             "wrapAround": true,
-            "autoPlay": 4000,
-            "pauseAutoPlayOnHover" : true,
+            "autoPlay": 3000,
+            "pauseAutoPlayOnHover" : false,
             "prevNextButtons": true,
             "contain" : true,
             "adaptiveHeight" : true,

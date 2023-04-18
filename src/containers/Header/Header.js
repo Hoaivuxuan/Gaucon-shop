@@ -4,9 +4,12 @@ import * as actions from "../../store/actions";
 import "./Header.scss";
 
 class Header extends Component {
+  handleAddNewAccount = () => {
+    alert('ok')
+  }
   render() {
     const { processLogout } = this.props;
-
+    const { isLoggedIn } = this.props;
     return (
       <div className="header-wrapper">
         <div className="header-inner flex-row padding-left-right logo-left medium-logo-center">
@@ -75,15 +78,26 @@ class Header extends Component {
                 </a>
               </li>
               <li className="account-item has-icon">
-                <a href="/">
-                  <i className="fa-solid fa-user"></i>
-                </a>
+                {isLoggedIn ? (
+                  <a href="/accountt">
+                    <i className="fa-solid fa-user"></i>
+                  </a>
+                ) : (
+                  <div>
+                    <i className="fa-solid fa-user"></i>
+                    <a href="/account/register">
+                      {" "}
+                      Đăng ký /{" "}
+                    </a>
+                    <a href="/account/login">Đăng nhập</a>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
-          <a href="/" className="btn btn-logout" onClick={processLogout}>
+          {/* <a href="/" className="btn btn-logout" onClick={processLogout}>
             <i className="fas fa-sign-out-alt"></i>
-          </a>
+          </a> */}
         </div>
       </div>
     );
