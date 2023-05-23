@@ -15,7 +15,7 @@ class Home extends Component {
       // <Redirect to={linkToRedirect} />
       <div className="home">
         <div
-          class="slider-container carousel"
+          className="slider-container carousel"
           data-flickity='{
             "cellAlign": "center",
             "imagesLoaded": true,
@@ -60,7 +60,176 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="product"></div>
+        {/*  */}
+        <div className="section-content relative">
+          <div class="container section-title-container">
+            <h1 class="section-title section-title-center">
+              <b></b>
+              <span class="section-title-main">Áo</span>
+              <b></b>
+            </h1>
+          </div>
+          {/*  */}
+          <div
+            className="slider-container carousel"
+            data-flickity='{
+              "imagesLoaded": true, 
+              "groupCells": "100%", 
+              "dragThreshold" : 5, 
+              "cellAlign": "left",
+              "wrapAround": true,
+              "prevNextButtons": true,
+              "percentPosition": true,
+              "pageDots": false, 
+              "rightToLeft": false, 
+              "autoPlay" : 2000 }'
+          >
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+          </div>
+          {/*  */}
+          <div class="container section-title-container">
+            <h1 class="section-title section-title-center">
+              <b></b>
+              <span class="section-title-main">Quần</span>
+              <b></b>
+            </h1>
+          </div>
+          {/*  */}
+          <div
+            className="slider-container carousel"
+            data-flickity='{
+              "imagesLoaded": true, 
+              "groupCells": "100%", 
+              "dragThreshold" : 5, 
+              "cellAlign": "left",
+              "wrapAround": true,
+              "prevNextButtons": true,
+              "percentPosition": true,
+              "pageDots": false, 
+              "rightToLeft": false, 
+              "autoPlay" : 2000 }'
+          >
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+          </div>
+          {/*  */}
+          <div class="container section-title-container">
+            <h1 class="section-title section-title-center">
+              <b></b>
+              <span class="section-title-main">Phụ Kiện</span>
+              <b></b>
+            </h1>
+          </div>
+          {/*  */}
+          <div
+            className="slider-container carousel"
+            data-flickity='{
+              "imagesLoaded": true, 
+              "groupCells": "100%", 
+              "dragThreshold" : 5, 
+              "cellAlign": "left",
+              "wrapAround": true,
+              "prevNextButtons": true,
+              "percentPosition": true,
+              "pageDots": false, 
+              "rightToLeft": false, 
+              "autoPlay" : 2000 }'
+          >
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+            <div class="carousel-cell">
+              <div className="box-image">
+                <a href="/">
+                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
+                </a>
+              </div>
+              <div className="box-text text-center is-small"></div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

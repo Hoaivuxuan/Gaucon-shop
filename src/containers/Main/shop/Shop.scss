@@ -1,0 +1,28 @@
+.page-title {
+    position: relative;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin: auto;
+}
+
+.woocommerce-result-count {
+    display: inline-block;
+    margin: 0 1em 0 auto;
+}
+
+.woocommerce-ordering {
+    position: relative;
+    z-index: 3;
+
+    select {
+        margin: 5px 0;
+        display: inline-block
+    }
+}
+
+.shop {}

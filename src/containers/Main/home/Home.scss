@@ -25,7 +25,7 @@
 
     .slider-container {
         padding: 0 0;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     @media (max-width: 1500px) {
@@ -46,6 +46,81 @@
             .col {
                 padding: 0 15px 30px;
             }
+        }
+    }
+
+    .section-content {
+        z-index: 1;
+        width: 90%;
+        margin: 0 auto;
+
+        .carousel {
+            img {
+                width: 100%;
+                // height: auto;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .carousel-cell {
+                width: 25%;
+                // height: auto;
+                margin-right: 10px;
+                border-radius: 5px;
+            }
+
+        }
+    }
+
+    .relative {
+        position: relative !important
+    }
+
+    .container {
+        max-width: 1340px;
+    }
+
+    .section-title-container {
+        margin-bottom: 1.5em
+    }
+
+    .section-title {
+        position: relative;
+        -js-display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+
+        b {
+            display: block;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            height: 2px;
+            opacity: .1;
+            background-color: currentColor
+        }
+
+        span {
+            margin: 0 15px;
+            color: brown;
+        }
+    }
+
+    .section-title-center {
+        .span {
+            margin: 0 15px
         }
     }
 }

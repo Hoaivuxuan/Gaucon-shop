@@ -27,7 +27,7 @@ class Header extends Component {
                 </a>
               </li>
               <li className="product">
-                <a className="dropbtn">
+                <a className="dropbtn" href="/shop">
                   SHOP
                   <i class="fa-solid fa-angle-down"></i>
                 </a>

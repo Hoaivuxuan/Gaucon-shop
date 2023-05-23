@@ -17,6 +17,7 @@ import Account from "./Main/account/Account";
 import Login from "./Main/login/Login";
 import Register from "./Main/register/Register";
 import System from "../routes/System";
+import Shop from "./Main/shop/Shop";
 import ConfirmModal from "../components/ConfirmModal";
 //
 import Topbar from "./Header/Topbar";
@@ -69,6 +70,8 @@ class App extends Component {
                   />
                   {/* userIsNotAuthenticated  de kiem tra ng dung da dang nhap chua, neu chua dang nhap thi component se hien thi*/}
                   <Route path={path.REGISTER} component={Register} />
+                  <Route path='/shop' component={Shop}/>
+                  {/*  */}
                   <Route path={path.SYSTEM} component={System} />
                 </Switch>
               </span>
