@@ -8,17 +8,21 @@ const createNewAccountService = (data) => {
   return axios.post("/api/create-new-account", data);
 };
 
-const getAllUsers = (inputId) => {
+const getUsers = (inputId) => {
   return axios.get(`/api/get-all-users?id=${inputId}`);
 };
 
-const showAllProducts = () => {
-  return axios.get("");
+const showProducts = (id) => {
+  return axios.get("/api/get-product", id);
 };
+const editAccount = (inputData) => {
+  return axios.put("/api/edit-account", inputData);
+}
 //
 export {
   handleLoginApi,
   createNewAccountService,
-  showAllProducts,
-  getAllUsers,
+  showProducts,
+  getUsers,
+  editAccount,
 };

@@ -114,7 +114,7 @@ class Register extends Component {
               </div>
               <div className="col-12 username">
                 <input
-                  type="number"
+                  // type="number"
                   className="form-control"
                   placeholder="Số điện thoại"
                   value={this.state.phonenumber}
@@ -189,13 +189,6 @@ class Register extends Component {
                     <FontAwesomeIcon className="facebook" icon={faFacebook} />
                   </div>
                 </div>
-              </div>
-              <div className="register">
-                Bạn chưa có tài khoản?
-                <a className="create-acc" href="/">
-                  {" "}
-                  Đăng ký ngay!
-                </a>
               </div>
             </div>
           </div>

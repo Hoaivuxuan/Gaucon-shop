@@ -1,14 +1,32 @@
 import React, { Component } from "react";
+import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Flickity from "flickity";
 import "flickity/dist/flickity.min.css";
 import Carousel from "react-bootstrap/Carousel";
+import { showProducts } from "../../../services/userService";
 import "./Home.scss";
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: [],
+    };
+  }
+  fetchDataProduct = async (product) => {
+    const res = await showProducts(product);
+    console.log("check res", res);
+    this.setState({ product: res.data });
+  };
+  componentDidMount() {
+    this.fetchDataProduct();
+  }
   render() {
-    const { isLoggedIn } = this.props;
+    // const { isLoggedIn } = this.props;
+    const { product } = this.state;
+    console.log("check product: ", product);
     // let linkToRedirect = isLoggedIn ? "/" : "/login";
 
     return (
@@ -36,11 +54,11 @@ class Home extends Component {
             "parallax" : 0,
             "friction": 0.6 }'
         >
-          <div class="carousel-cell">
-            <img src="http://127.0.0.1:5500/src/assets/banner-shopgau.png" />
+          <div className="carousel-cell">
+            <img src="http://127.0.0.1:5501/src/assets/banner-shopgau.png" />
           </div>
-          <div class="carousel-cell">
-            <img src="http://127.0.0.1:5500/src/assets/banner2.png" />
+          <div className="carousel-cell">
+            <img src="http://127.0.0.1:5501/src/assets/banner2.png" />
           </div>
         </div>
         {/*  */}
@@ -48,30 +66,30 @@ class Home extends Component {
           <div className="col medium-6 small-12 large-6">
             <div className="col-inner">
               <a href="#">
-                <img src="http://127.0.0.1:5500/src/assets/Fashion.png"></img>
+                <img src="http://127.0.0.1:5501/src/assets/Fashion.png"></img>
               </a>
             </div>
           </div>
           <div className="col medium-6 small-12 large-6">
             <div className="col-inner">
               <a href="#">
-                <img src="http://127.0.0.1:5500/src/assets/Fashion1.png"></img>
+                <img src="http://127.0.0.1:5501/src/assets/Fashion1.png"></img>
               </a>
             </div>
           </div>
         </div>
         {/*  */}
         <div className="section-content relative">
-          <div class="container section-title-container">
-            <h1 class="section-title section-title-center">
+          <div className="container section-title-container">
+            <h1 className="section-title section-title-center">
               <b></b>
-              <span class="section-title-main">Áo</span>
+              <span className="section-title-main">Áo</span>
               <b></b>
             </h1>
           </div>
           {/*  */}
           <div
-            className="slider-container carousel"
+            className="slider-container carousel row"
             data-flickity='{
               "imagesLoaded": true, 
               "groupCells": "100%", 
@@ -84,50 +102,57 @@ class Home extends Component {
               "rightToLeft": false, 
               "autoPlay" : 2000 }'
           >
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
+            {product &&
+              product.map((item) => {
+                const aoProducts = [];
+                //
+                if (item.idGroup.toString().startsWith("1")) {
+                  aoProducts.push(item.imageP);
+                  aoProducts.push(item.nameP);
+                  aoProducts.push(item.priceP + "đ");
+                }
+                return (
+                  <div className="col-3 carousel-cell" key={item.id}>
+                    <div className="box-image">
+                      <a href="/">
+                        <img src={aoProducts[0]} alt="" />
+                      </a>
+                    </div>
+                    <div className="box-text box-text-products text-center grid-style-2">
+                      <div className="title-wrapper">
+                        {" "}
+                        <p className="name product-title woocommerce-loop-product__title">
+                          <a
+                            href="https://newseven.vn/product/ao-hoodie-boxy-hi"
+                            className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                          >
+                            {aoProducts[1]}
+                          </a>
+                        </p>
+                      </div>
+                      <div className="price-wrapper">
+                        <span className="price">
+                          <span className="woocommerce-Price-amount amount">
+                            <bdi>{aoProducts[2]}</bdi>
+                          </span>
+                        </span>
+                      </div>{" "}
+                    </div>
+                  </div>
+                );
+              })}
           </div>
           {/*  */}
-          <div class="container section-title-container">
-            <h1 class="section-title section-title-center">
+          <div className="container section-title-container">
+            <h1 className="section-title section-title-center">
               <b></b>
-              <span class="section-title-main">Quần</span>
+              <span className="section-title-main">Quần</span>
               <b></b>
             </h1>
           </div>
           {/*  */}
           <div
-            className="slider-container carousel"
+            className="slider-container carousel row"
             data-flickity='{
               "imagesLoaded": true, 
               "groupCells": "100%", 
@@ -140,50 +165,57 @@ class Home extends Component {
               "rightToLeft": false, 
               "autoPlay" : 2000 }'
           >
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
+            {product &&
+              product.map((item) => {
+                const quanProducts = [];
+                //
+                if (item.idGroup.toString().startsWith("2")) {
+                  quanProducts.push(item.imageP);
+                  quanProducts.push(item.nameP);
+                  quanProducts.push(item.priceP + "đ");
+                }
+                return (
+                  <div className="col-3 carousel-cell" key={item.id}>
+                    <div className="box-image">
+                      <a href="/">
+                        <img src={quanProducts[0]} alt="" />
+                      </a>
+                    </div>
+                    <div className="box-text box-text-products text-center grid-style-2">
+                      <div className="title-wrapper">
+                        {" "}
+                        <p className="name product-title woocommerce-loop-product__title">
+                          <a
+                            href="https://newseven.vn/product/ao-hoodie-boxy-hi"
+                            className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                          >
+                            {quanProducts[1]}
+                          </a>
+                        </p>
+                      </div>
+                      <div className="price-wrapper">
+                        <span className="price">
+                          <span className="woocommerce-Price-amount amount">
+                            <bdi>{quanProducts[2]}</bdi>
+                          </span>
+                        </span>
+                      </div>{" "}
+                    </div>
+                  </div>
+                );
+              })}
           </div>
           {/*  */}
-          <div class="container section-title-container">
-            <h1 class="section-title section-title-center">
+          <div className="container section-title-container">
+            <h1 className="section-title section-title-center">
               <b></b>
-              <span class="section-title-main">Phụ Kiện</span>
+              <span className="section-title-main">Phụ Kiện</span>
               <b></b>
             </h1>
           </div>
           {/*  */}
           <div
-            className="slider-container carousel"
+            className="slider-container carousel row"
             data-flickity='{
               "imagesLoaded": true, 
               "groupCells": "100%", 
@@ -196,38 +228,45 @@ class Home extends Component {
               "rightToLeft": false, 
               "autoPlay" : 2000 }'
           >
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
-            <div class="carousel-cell">
-              <div className="box-image">
-                <a href="/">
-                  <img src="http://127.0.0.1:5500/src/assets/products/ao/%C3%81o%20Thun%20Studio%20Essential.jpg" />
-                </a>
-              </div>
-              <div className="box-text text-center is-small"></div>
-            </div>
+            {product &&
+              product.map((item) => {
+                const phukienProducts = [];
+                //
+                if (item.idGroup.toString().startsWith("3")) {
+                  phukienProducts.push(item.imageP);
+                  phukienProducts.push(item.nameP);
+                  phukienProducts.push(item.priceP + "đ");
+                }
+                return (
+                  <div className="col-3 carousel-cell" key={item.id}>
+                    <div className="box-image">
+                      <a href="/">
+                        <img src={phukienProducts[0]} alt="" />
+                      </a>
+                    </div>
+                    <div className="box-text box-text-products text-center grid-style-2">
+                      <div className="title-wrapper">
+                        {" "}
+                        <p className="name product-title woocommerce-loop-product__title">
+                          <a
+                            href="https://newseven.vn/product/ao-hoodie-boxy-hi"
+                            className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                          >
+                            {phukienProducts[1]}
+                          </a>
+                        </p>
+                      </div>
+                      <div className="price-wrapper">
+                        <span className="price">
+                          <span className="woocommerce-Price-amount amount">
+                            <bdi>{phukienProducts[2]}</bdi>
+                          </span>
+                        </span>
+                      </div>{" "}
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

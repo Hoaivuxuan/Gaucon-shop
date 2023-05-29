@@ -15,14 +15,20 @@
         "hàng",
         "Hiển",
         "Infor",
+        "instock",
         "kiếm",
+        "modalbody",
+        "modalfooter",
+        "modalheader",
         "parrent",
         "Persistor",
         "phonenumber",
+        "primarys",
         "thoại",
         "toastify",
         "Topbar",
         "Trang",
         "woocommerce"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

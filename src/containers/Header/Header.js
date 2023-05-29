@@ -15,7 +15,7 @@ class Header extends Component {
         <div className="header-inner flex-row padding-left-right logo-left medium-logo-center">
           <div className="flex-col logo">
             <a href="/">
-              <img src="http://127.0.0.1:5500/src/assets/gau-logo-removebg-preview.png" />
+              <img src="http://127.0.0.1:5501/src/assets/gau-logo-removebg-preview.png" />
             </a>
           </div>
 
@@ -29,7 +29,7 @@ class Header extends Component {
               <li className="product">
                 <a className="dropbtn" href="/shop">
                   SHOP
-                  <i class="fa-solid fa-angle-down"></i>
+                  <i className="fa-solid fa-angle-down"></i>
                 </a>
                 <div className="product-content">
                   <a href="#">Áo</a>
@@ -56,7 +56,7 @@ class Header extends Component {
                     placeholder="Search..."
                   />
                 </div>
-                <div class="col-1">
+                <div className="col-1">
                   <button
                     type="submit"
                     value="Tìm kiếm"

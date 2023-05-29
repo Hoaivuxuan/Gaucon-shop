@@ -1,0 +1,55 @@
+.modalheader {
+    padding-left: 10%;
+    background-color: orange;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.modalbody {
+    height: 300px;
+    border-radius: 5px;
+
+    .form-group {
+        margin-bottom: 11px;
+        position: relative;
+        padding: 0;
+        margin-right: 0px;
+        padding-left: 5%;
+        .form-control {
+            border: 1px solid #DDE1EF;
+            border-radius: 4px;
+            padding: 18px 10px 0px 12px;
+            margin: 0;
+            position: relative;
+            z-index: 10;
+            background: transparent !important;
+            min-height: 48px;
+            font-size: 20px;
+            padding-right: 30px;
+            text-overflow: ellipsis;
+            box-shadow: none
+        }
+    }
+
+    input {
+        width: 80%;
+        border-color: gray;
+    }
+}
+
+.modalfooter {
+    border-radius: 5px;
+
+    button {
+        margin: 0 auto;
+        width: 46%;
+
+        .save-color {
+            background-color: orange;
+        }
+    }
+}
+
+.modal-content {
+    border-radius: 5px;
+}
