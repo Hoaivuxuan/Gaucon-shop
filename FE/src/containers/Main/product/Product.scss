@@ -1,0 +1,114 @@
+.row-collapse {
+    max-width: 1340px;
+
+    a {
+        font-size: 20px;
+        color: brown;
+    }
+}
+
+.custom-product-page {}
+
+.body {}
+
+.col-inner {
+    margin-right: auto;
+    margin-left: 0
+}
+
+.infoproduct {
+    padding-top: 50px;
+}
+
+input[type="number"] {
+    max-width: 2.5em;
+    width: 2.5em;
+    text-align: center;
+    border-radius: 0 !important;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-size: 1em
+}
+
+.minus {
+    border-right: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+    text-shadow: 1px 1px 1px #fff;
+    color: #666;
+    border: 1px solid #ddd;
+    text-transform: none;
+    font-weight: normal
+}
+
+.plus {
+    border-left: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+    text-shadow: 1px 1px 1px #fff;
+    color: #666;
+    border: 1px solid #ddd;
+    text-transform: none;
+    font-weight: normal
+}
+
+input[type="number"] {
+    max-width: 2.5em;
+    width: 2.5em;
+    text-align: center;
+    border-radius: 0 !important;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-size: 1em;
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+    text-shadow: 1px 1px 1px #fff;
+    color: #666;
+    border: 1px solid #ddd;
+    text-transform: none;
+    font-weight: normal
+}
+
+.add-to-cart-container {
+    padding: 10% 0;
+
+    button[type="submit"] {
+        border-left: 0 !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        overflow: hidden;
+        position: relative;
+        background-color: gray;
+        text-shadow: 1px 1px 1px #fff;
+        color: white;
+        border: 1px solid #ddd;
+        text-transform: none;
+        font-weight: high
+    }
+}
+
+.buy_now_button {
+    background: red;    
+    display: inline-block;
+    overflow: hidden;
+    clear: both;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: normal;
+    color: #fff !important;
+    text-align: center;
+    margin: 0 0 20px;
+    text-decoration: none;
+    border-bottom: 0 !important;
+    font-weight: normal;
+}

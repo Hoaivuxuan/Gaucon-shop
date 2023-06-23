@@ -1,0 +1,105 @@
+.page-title {
+    position: relative;
+}
+
+
+
+.text-center {
+    text-align: center
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.container {
+    // padding-left: 10px;
+    // padding-right: 10px;\ư\ư\\\\\\\\
+    // margin-left: auto;
+    // margin-right: auto;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.woocommerce-result-count {
+    display: inline-block;
+    margin: 0 1em 0 auto;
+}
+
+.woocommerce-ordering {
+    position: relative;
+    z-index: 3;
+
+    select {
+        margin: 5px 0;
+        display: inline-block
+    }
+}
+
+.category-page-row {
+    padding-top: 40px
+}
+
+.shop {
+    ul>li {
+        list-style-type: none;
+    }
+
+    .danhmuc {
+        position: relative;
+        margin: 0;
+        padding: 0 15px 30px;
+        width: 100%;
+    }
+
+    padding: 10px 15px;
+
+    .links {
+        margin: 5px 0;
+
+        font-size: .85em;
+
+        li {
+            margin: 0 .4em;
+
+            display: inline-block;
+
+            a {
+                color: currentColor
+            }
+        }
+
+        li:before {
+            font-family: 'fl-icons';
+            display: inline-block;
+            margin-right: 5px
+        }
+    }
+
+    .nav-pagination {
+        li {
+
+            a {
+                font-size: 1.1em;
+                display: block;
+                height: 2.25em;
+                line-height: 2em;
+                text-align: center;
+                width: auto;
+                min-width: 2.25em;
+                padding: 0 7px;
+                font-weight: bolder;
+                border-radius: 99px;
+                border: 2px solid currentColor;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                vertical-align: top
+            }
+
+        }
+    }
+}
